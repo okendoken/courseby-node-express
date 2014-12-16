@@ -3,7 +3,9 @@ courseby-node-express
 
 To install all dependencies execute:
     
-    npm install
+    npm install express
+    npm install sqlite3
+    npm install body-parser
 
 then:
   
