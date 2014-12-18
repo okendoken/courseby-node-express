@@ -1,0 +1,18 @@
+//
+   Created by Ales Drobysh on 12/16/14.
+extends  layout
+
+block main
+   main: .container
+      table.table
+         tr
+            th ID
+            th Username
+            th Age
+            th Delete user
+         each user in users
+            tr
+               td !{user.id}
+               td: a(href="/users/"+user.id) !{user.username}
+               td !{user.age}
+               td: a(href="/delete/"+user.id) Delete
