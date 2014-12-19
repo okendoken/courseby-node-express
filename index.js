@@ -3,9 +3,10 @@ var db = new sqlite3.Database('users.db');
 var express = require('express');
 var app = express();
 
-var templates = require('./templates.js');
-
 app.use(express.static(__dirname + '/public'));
+
+app.set('views', __dirname + '/views');
+app.set('view engine', 'jade');
 
 var bodyParser = require('body-parser');
 app.use( bodyParser.json() );       // to support JSON-encoded bodies
@@ -14,19 +15,24 @@ app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
 }));
 
 app.get('/', function (req, res) {
-    db.all('select * from users', function(err, users){
-        res.send(templates.layout(templates.list(users)))
-    })
+    db.all('select * from users', function(err, users) {
+        res.render('list', {users : users});
+    });
+});
+
+app.get('/users/:id', function(req, res) {
+    db.each('select * from users where id = ' + req.params.id, function(err, user) {
+        res.render('profile', {user: user});
+    });
 });
 
 app.get('/create', function (req, res) {
-    res.send(templates.layout(templates.add()))
+    res.render('create');
 });
 
 app.get('/delete/:id', function (req, res) {
     db.run('delete from users where id = ' + req.params.id, function(){
-        res.send(templates.layout('<p>User Deleted!</p>' +
-        '<a href="/">Users list</a> '))
+        res.render('deleted');
     })
 });
 
@@ -35,8 +41,7 @@ app.post('/add', function (req, res) {
     req.body.username +'","' +
     req.body.password +'",' +
     req.body.age+')', function(){
-        res.send(templates.layout('<p>User Added!</p>' +
-        '<a href="/">Users list</a> '))
+        res.render('added', {username: req.body.username});
     })
 });
 

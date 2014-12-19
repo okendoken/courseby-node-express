@@ -1,0 +1,54 @@
+main {
+    padding-top: 50px;
+}
+
+ul.sidebar-menu {
+    list-style-type: none;
+    margin-top: 10px;
+    padding-left: 0;
+}
+
+.avatar {
+    margin: 0;
+    width: 100%;
+}
+
+.page-options ul {
+    list-style-type: none;
+    padding: 0 0 5px 5px;
+}
+
+.page-options ul>li:first-child {
+    border-bottom: solid 1px #DDD;
+    padding-bottom: 5px;
+}
+
+.username {
+    font-size: 0.9em;
+    font-weight: bold;
+    color: #428BCA;
+    margin: 0;
+}
+
+.status {
+    font-size: 0.9em;
+    color: #000;
+    margin-bottom: 10px;
+    border-bottom: solid #DDD 1px;
+}
+
+.about-user {
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+.about-user .param {
+    width: 40%;
+    float: left;
+}
+
+.about-user .value {
+    width: 60%;
+    float: left;
+    color: #000000;
+}

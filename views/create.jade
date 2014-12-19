@@ -1,0 +1,19 @@
+//
+   Created by Ales Drobysh on 12/17/14.
+
+extends  layout
+block main
+   main: .container
+      h3 Add New User
+      form.form-horizontal(action="add" method="post")
+         .form-group
+            label(for="username") Username
+            input#username.form-control(name="username")
+         .form-group
+            label(for="password") Password
+            input#password.form-control(name="password")
+         .form-group
+            label(for="age") Age
+            input#age.form-control(name="age")
+         button.btn.btn-success(type="submit") Create
+      a(href="/") Users List

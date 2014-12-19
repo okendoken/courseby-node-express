@@ -1,0 +1,28 @@
+//
+   Created by Ales Drobysh on 12/17/14.
+
+extends  layout
+block main
+   main: .container
+      .col-md-2
+         ul.sidebar-menu
+            li: a(href='#') My profile
+            li: a(href='#') My friends
+            li: a(href='#') My enemies
+      .col-md-10
+         .panel.panel-custom
+            .panel-header #{user.username}
+            .panel-body
+               .col-md-3.no-pad-left
+                  img.avatar(src="../img/avatar.png")
+                  .page-options
+                     ul
+                        li: a(href='#') Edit page
+                        li: a(href='#') Other stuff
+                        li: a(href='#') Some other stuff
+               .col-md-7
+                  .username #{user.username}
+                  .status to be or not ot be...
+                  .about-user
+                     .param Age:
+                     .value #{user.age}
