@@ -7,4 +7,7 @@
 ## Directory-based project format:
 .idea/
 
+node_modules/
 
+## database is generating at first launch
+*.db
