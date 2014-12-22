@@ -7,16 +7,16 @@ app.use(express.static(__dirname + '/public'));
 app.set('views', __dirname + '/views');
 app.set('view engine', 'jade');
 
-var routes = require('./routes/index');
-app.use('/', routes);
-
-app.set('port', process.env.PORT || 3000);
-
 var bodyParser = require('body-parser');
 app.use( bodyParser.json() );       // to support JSON-encoded bodies
 app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
     extended: true
 }));
+
+var routes = require('./routes/index');
+app.use('/', routes);
+
+app.set('port', process.env.PORT || 3000);
 
 models.sequelize.sync().then(function() {
     var server = app.listen(app.get('port'), function () {
