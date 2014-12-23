@@ -3,10 +3,7 @@ courseby-node-express
 
 To install all dependencies execute:
     
-    npm install express
-    npm install sqlite3
-    npm install body-parser
-    npm install jade
+    npm install express sequelize sequelize-cli sqlite3 body-parser jade bcrypt
 
 then:
   
