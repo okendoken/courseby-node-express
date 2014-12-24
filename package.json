@@ -18,12 +18,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/alesdrobysh/courseby-node-express.git"
+    "url": "https://github.com/okendoken/courseby-node-express.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/alesdrobysh/courseby-node-express/issues"
+    "url": "https://github.com/okendoken/courseby-node-express/issues"
   },
-  "homepage": "https://github.com/alesdrobysh/courseby-node-express"
+  "homepage": "https://github.com/okendoken/courseby-node-express"
 }
