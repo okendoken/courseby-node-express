@@ -8,5 +8,3 @@ To install all dependencies execute:
 then:
   
     node index.js
-
-Try at https://fathomless-plains-2277.herokuapp.com/
