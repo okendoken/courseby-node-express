@@ -6,11 +6,15 @@
   "dependencies": {
     "bcrypt": "^0.8.0",
     "body-parser": "^1.10.0",
+    "connect-flash": "^0.1.1",
     "express": "^4.10.6",
+    "express-session": "^1.9.3",
     "jade": "^1.8.2",
+    "mysql": "^2.5.4",
+    "passport": "^0.2.1",
+    "passport-local": "^1.0.0",
     "sequelize": "^2.0.0-rc1",
-    "sequelize-cli": "^1.0.1",
-    "sqlite3": "^3.0.4"
+    "sequelize-cli": "^1.0.1"
   },
   "devDependencies": {},
   "scripts": {

@@ -52,3 +52,24 @@ ul.sidebar-menu {
     float: left;
     color: #000000;
 }
+
+.account-wall {
+    margin-bottom: 10px;
+}
+
+.signup-wall {
+    margin-top: 10px;
+}
+
+.profile-img {
+    border-radius: 100px;
+    margin: 10px;
+}
+
+.form-signin .form-control {
+    margin-bottom: 5px;
+}
+
+a.new-account {
+    text-align: center;
+}

@@ -11,3 +11,4 @@ node_modules/
 
 ## database is generating at first launch
 *.db
+npm-debug.log

@@ -15,6 +15,20 @@ app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
     extended: true
 }));
 
+var passport = require('passport');
+var expressSession = require('express-session');
+app.use(expressSession({secret: 'mySecretKey',
+                        saveUninitialized: true,
+                        resave: true}));
+app.use(passport.initialize());
+app.use(passport.session());
+
+var flash = require('connect-flash');
+app.use(flash());
+
+var initPassport = require('../config/passport/init');
+initPassport(passport);
+
 var routes = require('./routes/index');
 app.use('/', routes);
 
