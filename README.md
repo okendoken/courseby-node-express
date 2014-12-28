@@ -8,3 +8,7 @@ To install all dependencies execute:
 then:
   
     node index.js
+
+To run tests execute:
+
+    make tests

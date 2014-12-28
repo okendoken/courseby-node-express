@@ -25,11 +25,6 @@ Object.keys(db).forEach(function(modelName) {
   }
 });
 
-var migrator = sequelize.getMigrator({
-  path:        process.cwd() + '/../../migrations',
-  filesFilter: /\.js$/
-});
-
 db.sequelize = sequelize;
 db.Sequelize = Sequelize;
 

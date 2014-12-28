@@ -10,11 +10,14 @@
     "express": "^4.10.6",
     "express-session": "^1.9.3",
     "jade": "^1.8.2",
+    "mocha": "^2.1.0",
     "mysql": "^2.5.4",
     "passport": "^0.2.1",
     "passport-local": "^1.0.0",
     "sequelize": "^2.0.0-rc1",
-    "sequelize-cli": "^1.0.1"
+    "sequelize-cli": "^1.0.1",
+    "should": "^4.4.2",
+    "supertest": "^0.15.0"
   },
   "devDependencies": {},
   "scripts": {
