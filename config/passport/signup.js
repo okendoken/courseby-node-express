@@ -19,7 +19,7 @@ module.exports = function(passport) {
                                     console.log('User already exists with username: ' + username);
                                     return done(null, false, req.flash('message', 'User Already Exists'));
                                 } else {
-                                    var newUser = models.User.create({
+                                    models.User.create({
                                         username: username,
                                         password: password,
                                         age: req.body.age

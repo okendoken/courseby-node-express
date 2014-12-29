@@ -6,6 +6,7 @@
   "dependencies": {
     "bcrypt": "^0.8.0",
     "body-parser": "^1.10.0",
+    "chai": "^1.10.0",
     "connect-flash": "^0.1.1",
     "express": "^4.10.6",
     "express-session": "^1.9.3",
@@ -16,7 +17,6 @@
     "passport-local": "^1.0.0",
     "sequelize": "^2.0.0-rc1",
     "sequelize-cli": "^1.0.1",
-    "should": "^4.4.2",
     "supertest": "^0.15.0"
   },
   "devDependencies": {},

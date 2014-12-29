@@ -4,7 +4,6 @@ var models = require('../../app/models');
 
 module.exports = function(passport){
     passport.serializeUser(function(user, done) {
-        console.log('serializing user: ', user);
         done(null, user.dataValues.id);
     });
     passport.deserializeUser(function(id, done) {
@@ -12,7 +11,6 @@ module.exports = function(passport){
             .find({ where: { id: id } })
             .complete(
                 function(err, user) {
-                    console.log('deserializing user:', user);
                     done(err, user.dataValues.id);
         });
     });
