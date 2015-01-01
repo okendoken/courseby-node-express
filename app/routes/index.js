@@ -2,6 +2,7 @@ var models  = require('../models');
 var express = require('express');
 var passport = require('passport');
 var router  = express.Router();
+var appConfig = require('../../config/appConfig.js');
 
 var isAuthenticated = function (req, res, next) {
     if (req.isAuthenticated())
@@ -11,6 +12,8 @@ var isAuthenticated = function (req, res, next) {
 
 router.get('*', function(req, res, next) {
     res.locals.user = req.user || null;
+    res.locals.projectName = appConfig.projectName;
+    res.locals.yearWhenProjectStarted = appConfig.yearWhenProjectStarted;
     next();
 });
 
